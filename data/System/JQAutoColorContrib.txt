@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1522237725" format="1.1" reprev="4" version="4"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1522237725" format="1.1" version="1"}%
 ---+!! %TOPIC%
 %$SHORTDESCRIPTION%
 
@@ -165,5 +165,5 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
 %META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%
-%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1522229792" moveby="micha" movedto="System.JQAutoColorContrib.example1.png" movedwhen="1522237531" movefrom="System.JQAutoColorContrib.examples.png" size="41482" user="micha" version="1"}%
-%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1522237538" size="30362" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1522229792" size="41482" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1522237538" size="30362" user="ProjectContributor" version="1"}%
