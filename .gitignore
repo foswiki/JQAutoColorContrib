@@ -1,0 +1,12 @@
+igp_*
+*,v
+*.swp
+*.gz
+/JQAutoColorContrib.md5
+/JQAutoColorContrib.sha1
+/JQAutoColorContrib.tgz
+/JQAutoColorContrib.txt
+/JQAutoColorContrib.zip
+/JQAutoColorContrib_installer
+/JQAutoColorContrib_installer.pl
+pub/System/JQAutoColorContrib/autocolor.js

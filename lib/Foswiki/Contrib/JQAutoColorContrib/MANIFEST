@@ -1,0 +1,12 @@
+!noci
+data/System/JQAutoColorContrib.txt 0644
+lib/Foswiki/Contrib/JQAutoColorContrib/Config.spec 0644
+lib/Foswiki/Contrib/JQAutoColorContrib/Core.pm 0644
+lib/Foswiki/Contrib/JQAutoColorContrib/DEPENDENCIES 0644
+lib/Foswiki/Contrib/JQAutoColorContrib.pm 0644
+pub/System/JQAutoColorContrib/autocolor.js 0644
+pub/System/JQAutoColorContrib/autocolor.js.gz 0644
+pub/System/JQAutoColorContrib/autocolor.uncompressed.js 0644
+pub/System/JQAutoColorContrib/example1.png 0644
+pub/System/JQAutoColorContrib/example2.png 0644
+pub/System/JQAutoColorContrib/Makefile 0644
