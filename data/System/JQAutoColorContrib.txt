@@ -1,6 +1,6 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1522237725" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1561969171" format="1.1"  version="1"}%
 ---+!! %TOPIC%
-%$SHORTDESCRIPTION%
+%FORMFIELD{"Description"}%
 
 %TOC%
 
@@ -153,17 +153,18 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+| 01 Jul 2019 | skip auto-color if text is empty |
 | 28 Mar 2018 | initial release |
 
 %META:FORM{name="PackageForm"}%
 %META:FIELD{name="Author" title="Author" value="Michael Daum"}%
 %META:FIELD{name="Version" title="Version" value="%25$VERSION%25"}%
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
-%META:FIELD{name="Description" title="Description" value=""}%
-%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25$ROOTMODULE%25"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2018, MichaelDaum, All Rights Reserved"}%
+%META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/JQAutoColorContrib"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2018-2019, Michael Daum, All Rights Reserved"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
-%META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
-%META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%
-%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1522229792" size="41482" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1522237538" size="30362" user="ProjectContributor" version="1"}%
+%META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/JQAutoColorContrib"}%
+%META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/JQAutoColorContrib"}%
+%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1561969171" size="41482" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1561969171" size="30362" user="ProjectContributor" version="1"}%

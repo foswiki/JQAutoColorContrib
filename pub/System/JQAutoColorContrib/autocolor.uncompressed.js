@@ -1,11 +1,9 @@
 /*
- * jQuery auto-color plugin 1.00
+ * jQuery auto-color plugin 1.01
  *
- * Copyright (c) 2018 Michael Daum http://michaeldaumconsulting.com
+ * Copyright (c) 2018-2019 Michael Daum http://michaeldaumconsulting.com
  *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
+ * Licensed under the GPL license http://www.gnu.org/licenses/gpl.html
  *
  */
 
@@ -68,6 +66,11 @@
     }
 
     text = text.replace(/^\s*|\s*$/g, "");
+
+    if (!text.length) {
+      return;
+    }
+
     hsl = self.formatHSL(self.getHSL(text));
 
     //console.log("text=",text,"hash=",self.getHash(text),"hue=",self.getHue(self.getHash(text)));
@@ -76,6 +79,7 @@
       self.target.css(self.opts.property, hsl);
     } else {
       self.target
+	.addClass("jqAutoColor")
         .css("background", hsl)
         .css("color", self.getMatchingForeground());
     }

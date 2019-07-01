@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQAutoColorContrib is Copyright (C) 2018 Michael Daum http://michaeldaumconsulting.com
+# JQAutoColorContrib is Copyright (C) 2018-2019 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -35,9 +35,10 @@ sub new {
   my $this = bless(
     $class->SUPER::new(
       name => 'AutoColor',
-      version => '1.00',
+      version => '1.01',
       author => 'Michael Daum',
       homepage => 'http://foswiki.org/Extensions/JQAutoColorContrib',
+      css => ['autocolor.css'],
       javascript => ['autocolor.js'],
       puburl => '%PUBURLPATH%/%SYSTEMWEB%/JQAutoColorContrib',
       dependencies => ['livequery'],
