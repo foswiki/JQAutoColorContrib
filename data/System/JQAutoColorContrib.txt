@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1561969171" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1574081930" format="1.1"  version="1"}%
 ---+!! %TOPIC%
 %FORMFIELD{"Description"}%
 
@@ -76,6 +76,12 @@ and mapped to a matching color.
    * <a>Contacts</a>
    * <a>Manuals</a>
 </div>
+</div>
+
+---+++ Gradient
+
+<div class="jqAutoColor" data-soure="p" data-lightness="40" data-property="radial-gradient" style="padding:2em 2em 2em 5em">
+<p class="foswikiLarge">Radial Me</p>
 </div>
 
 <literal>
@@ -170,5 +176,5 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/JQAutoColorContrib"}%
 %META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/JQAutoColorContrib"}%
-%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1561969171" size="41482" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1561969171" size="30362" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="example1.png" attachment="examples.png" attr="" comment="" date="1574081930" size="41482" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="example2.png" attachment="example2.png" attr="" comment="" date="1574081930" size="30362" user="ProjectContributor" version="1"}%
