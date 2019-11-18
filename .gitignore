@@ -9,6 +9,6 @@ igp_*
 /JQAutoColorContrib.zip
 /JQAutoColorContrib_installer
 /JQAutoColorContrib_installer.pl
-pub/System/JQAutoColorContrib/autocolor.css
-pub/System/JQAutoColorContrib/autocolor.js
+pub/System/JQAutoColorContrib/build/autocolor.css
+pub/System/JQAutoColorContrib/build/autocolor.js
 pub/System/JQAutoColorContrib/*jslint

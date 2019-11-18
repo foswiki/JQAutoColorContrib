@@ -35,13 +35,12 @@ sub new {
   my $this = bless(
     $class->SUPER::new(
       name => 'AutoColor',
-      version => '1.01',
+      version => '2.00',
       author => 'Michael Daum',
       homepage => 'http://foswiki.org/Extensions/JQAutoColorContrib',
       css => ['autocolor.css'],
       javascript => ['autocolor.js'],
-      puburl => '%PUBURLPATH%/%SYSTEMWEB%/JQAutoColorContrib',
-      dependencies => ['livequery'],
+      puburl => '%PUBURLPATH%/%SYSTEMWEB%/JQAutoColorContrib/build',
     ),
     $class
   );

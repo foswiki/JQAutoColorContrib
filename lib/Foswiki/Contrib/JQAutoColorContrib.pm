@@ -20,8 +20,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '1.01';
-our $RELEASE = '01 Jul 2019';
+our $VERSION = '2.00';
+our $RELEASE = '18 Nov 2019';
 our $SHORTDESCRIPTION = 'Assign colors automatically based on text properties';
 our $NO_PREFS_IN_TOPIC = 1;
 
