@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQAutoColorContrib is Copyright (C) 2018-2019 Michael Daum http://michaeldaumconsulting.com
+# JQAutoColorContrib is Copyright (C) 2018-2022 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,8 +20,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '2.00';
-our $RELEASE = '18 Nov 2019';
+our $VERSION = '2.01';
+our $RELEASE = '04 May 2022';
 our $SHORTDESCRIPTION = 'Assign colors automatically based on text properties';
 our $NO_PREFS_IN_TOPIC = 1;
 

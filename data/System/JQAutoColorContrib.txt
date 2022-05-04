@@ -162,6 +162,7 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  04 May 2022 | fix setting properties other than the background |
 |  18 Nov 2019 | implement auto-generated gradient backgrounds |
 |  01 Jul 2019 | skip auto-color if text is empty |
 |  28 Mar 2018 | initial release |
@@ -172,7 +173,7 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/JQAutoColorContrib"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2018-2019, Michael Daum, All Rights Reserved"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2018-2022, Michael Daum, All Rights Reserved"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/JQAutoColorContrib"}%
 %META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/JQAutoColorContrib"}%

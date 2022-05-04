@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQAutoColorContrib is Copyright (C) 2018-2019 Michael Daum http://michaeldaumconsulting.com
+# JQAutoColorContrib is Copyright (C) 2018-2022 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -18,15 +18,8 @@ package Foswiki::Contrib::JQAutoColorContrib::Core;
 use strict;
 use warnings;
 
-use Foswiki::Func ();
-
-use constant TRACE => 0; # toggle me
-
-sub writeDebug {
-  Foswiki::Func::writeDebug("JQAutoColorContrib::Core - $_[0]") if TRACE;
-}
-
 use Foswiki::Plugins::JQueryPlugin::Plugin ();
+use Foswiki::Contrib::JQAutoColorContrib ();
 our @ISA = qw( Foswiki::Plugins::JQueryPlugin::Plugin );
 
 sub new {
@@ -35,7 +28,7 @@ sub new {
   my $this = bless(
     $class->SUPER::new(
       name => 'AutoColor',
-      version => '2.00',
+      version => $Foswiki::Contrib::JQAutoColorContrib::VERSION,
       author => 'Michael Daum',
       homepage => 'http://foswiki.org/Extensions/JQAutoColorContrib',
       css => ['autocolor.css'],

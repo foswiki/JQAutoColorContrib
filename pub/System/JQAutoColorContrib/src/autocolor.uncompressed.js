@@ -1,7 +1,7 @@
 /*
  * jQuery auto-color plugin 2.00
  *
- * Copyright (c) 2018-2019 Michael Daum http://michaeldaumconsulting.com
+ * Copyright (c) 2018-2022 Michael Daum http://michaeldaumconsulting.com
  *
  * Licensed under the GPL license http://www.gnu.org/licenses/gpl.html
  *
@@ -91,7 +91,7 @@
 
     //console.log("text=",text,"hash=",self.getHash(text),"hue=",self.getHue(self.getHash(text)));
 
-    if (self.opts.property) {
+    if (self.opts.property && self.opts.property !== 'background') {
       if (self.opts.property === 'radial-gradient') {
         self.target
           .css("background-image", "radial-gradient(circle farthest-side at 33%,$color1 0,$color2 100%)"
