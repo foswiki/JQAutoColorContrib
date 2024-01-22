@@ -37,13 +37,13 @@ and mapped to a matching color.
 %CLEAR%
 
 ---+++ Color icons
-<h4 class="jqAutoColor" data-property="color" data-source=".label" data-target=".jqIcon" data-lightness="50" data-seed="123">
+<h4 class="jqAutoColor" data-property="color" data-source=".label" data-source-context="this" data-target=".jqIcon" data-lightness="50" data-seed="123">
 %JQICON{"fa-certificate"}% <span class="label">Certificate</span>
 </h4>
-<h4 class="jqAutoColor" data-property="color" data-source=".label" data-target=".jqIcon" data-lightness="50" data-seed="123">
+<h4 class="jqAutoColor" data-property="color" data-source=".label" data-source-context="this" data-target=".jqIcon" data-lightness="50" data-seed="123">
 %JQICON{"fa-check-circle"}% <span class="label">Check</span>
 </h4>
-<h4 class="jqAutoColor" data-property="color" data-source=".label" data-target=".jqIcon" data-lightness="50" data-seed="123">
+<h4 class="jqAutoColor" data-property="color" data-source=".label" data-source-context="this" data-target=".jqIcon" data-lightness="50" data-seed="123">
 %JQICON{"fa-camera"}% <span class="label">Camera</span>
 </h4>
 
@@ -55,21 +55,21 @@ and mapped to a matching color.
    then="<img src='%ATTACHURLPATH%/example2.png' />"
 }%
 <div class="%IF{"not context AutoColorRegistered" then="foswikiHidden" else="container"}%">
-<div class="jqAutoColor box" data-source="h3" data-lightness="90" data-seed="%SEED%">
+<div class="jqAutoColor box" data-source="h3" data-source-context="this" data-lightness="90" data-seed="%SEED%">
    <h3 class="jqAutoColor" data-lightness="85" data-seed="%SEED%">Corporate</h3>
    * <a>Business Structure</a>
    * <a>Customers</a>
    * <a>Employee Directory</a>
    * <a>Our Company</a>
 </div>
-<div class="jqAutoColor box" data-source="h3" data-lightness="90" data-seed="%SEED%">
+<div class="jqAutoColor box" data-source="h3" data-source-context="this" data-lightness="90" data-seed="%SEED%">
    <h3 class="jqAutoColor" data-lightness="85" data-seed="%SEED%">Departments</h3>
    * <a>Finance & Planning</a>
    * <a>Human Resources</a>
    * <a>IT</a>
    * <a>Legal</a>
 </div>
-<div class="jqAutoColor box" data-source="h3" data-lightness="90" data-seed="%SEED%">
+<div class="jqAutoColor box" data-source="h3" data-source-context="this" data-lightness="90" data-seed="%SEED%">
    <h3 class="jqAutoColor" data-lightness="85" data-seed="%SEED%">Tools & Services</h3>
    * <a>Articles</a>
    * <a>Blogs</a>
@@ -162,6 +162,7 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  31 Aug 2022 | fixed computation of matching foreground color |
 |  04 May 2022 | fix setting properties other than the background |
 |  18 Nov 2019 | implement auto-generated gradient backgrounds |
 |  01 Jul 2019 | skip auto-color if text is empty |
@@ -173,7 +174,7 @@ Use HTML5 data parameters to specify parameters to the autoColor plugin. All par
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value="%25$SHORTDESCRIPTION%25"}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/JQAutoColorContrib"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2018-2022, Michael Daum, All Rights Reserved"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2018-2024, Michael Daum, All Rights Reserved"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="https://foswiki.org/Extensions/JQAutoColorContrib"}%
 %META:FIELD{name="Support" title="Support" value="https://foswiki.org/Support/JQAutoColorContrib"}%

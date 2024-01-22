@@ -1,7 +1,7 @@
 /*
- * jQuery auto-color plugin 2.00
+ * jQuery auto-color plugin 3.20
  *
- * Copyright (c) 2018-2022 Michael Daum http://michaeldaumconsulting.com
+ * Copyright (c) 2018-2024 Michael Daum http://michaeldaumconsulting.com
  *
  * Licensed under the GPL license http://www.gnu.org/licenses/gpl.html
  *
@@ -15,6 +15,7 @@
   var defaults = {
         text: undefined,
         source: undefined,
+        sourceContext: undefined,
         target: undefined,
         property: undefined, 
         saturation: [50,65,80],
@@ -36,11 +37,19 @@
     // gather opts by merging global defaults, plugin defaults and element defaults
     self.opts = $.extend({}, defaults, self.elem.data(), opts); 
 
-    if (typeof(self.opts.text) === 'undefined') {
+    if (typeof(self.opts.text) === 'undefined' || self.opts.text === "") {
       if (typeof(self.opts.source) === 'undefined') {
         self.sourceElem = self.elem;
       } else {
-        self.sourceElem = self.elem.find(self.opts.source);
+        if (typeof(self.opts.sourceContext) === 'undefined') {
+          self.sourceElem = $(self.opts.source);
+        } else {
+          if (self.opts.sourceContext === 'this') {
+            self.sourceElem = self.elem.find(self.opts.source);
+          } else {
+            self.sourceElem = $(self.opts.sourceContext).find(self.opts.source);
+          }
+        }
       }
       self.sourceElem.on("input", function() {
         self.init();
@@ -60,15 +69,20 @@
   AutoColor.prototype.init = function () {
     var self = this, text, hsl;
 
-    if (typeof(self.opts.text) !== 'undefined') {
+    if (typeof(self.opts.text) === 'string' && self.opts.text !== "") {
       text = self.opts.text;
+
     } else {
       text = $.map(self.sourceElem, function(elem) { 
-        var $elem = $(elem);
+        var $elem = $(elem), text;
         if ($elem.is("input")) {
-          return $elem.val(); 
+          text = $elem.val(); 
         } else {
-          return $elem.text(); 
+          text = $elem.text(); 
+        }
+        text = text.trim()
+        if (text !== '') {
+          return text;
         }
       }).join(" ");
     }
@@ -84,6 +98,7 @@
     text = text.replace(/^\s*|\s*$/g, "");
 
     if (!text.length) {
+      console.warn("no text found to auto-color");
       return;
     }
 
@@ -104,9 +119,8 @@
       }
     } else {
       self.target
-        .addClass("jqAutoColor")
         .css("background", self.formatHSL(hsl))
-        .css("color", self.getMatchingForeground());
+        .css("color", self.getMatchingForeground(hsl));
     }
   }; 
 
@@ -179,12 +193,18 @@
     return "hsl("+hsl[0]+","+hsl[1]+"%,"+hsl[2]+"%)";
   };
 
-  AutoColor.prototype.getMatchingForeground = function(rgb) {
-    var self = this;
+  AutoColor.prototype.getMatchingForeground = function(hsl) {
+    var self = this,
+        rgb;
 
-    if (typeof(rgb) !== 'object') {
-      rgb = rgb || self.target.css("background-color");
+    if (typeof(hsl) === 'undefined') {
+      rgb = self.target.css("background-color");
       rgb = rgb.match(/\d+/g);
+    } else {
+      if (typeof(hsl) !== 'object') {
+        hsl = rgb.match(/\d+/g);
+      }
+      rgb = self.hslToRgb(hsl);
     }
 
     return self.isLight(rgb) ? self.opts.dark: self.opts.light;
@@ -195,6 +215,56 @@
     var yiq = ((rgb[0] * 299) + (rgb[1] * 587) + (rgb[2] * 114)) /1000;
 
     return yiq > 128;
+  };
+
+  AutoColor.prototype.hslToRgb = function(hsl) {
+    var self = this,
+        t1, t2, 
+        r, g, b, 
+        hue, sat, light;
+
+    hue = hsl[0] / 60;;
+    sat = hsl[1] > 1 ? hsl[1] / 100 : hsl[1];
+    light = hsl[2] > 1 ? hsl[2] / 100 : hsl[2];
+
+    if ( light <= 0.5 ) {
+      t2 = light * (sat + 1);
+    } else {
+      t2 = light + sat - (light * sat);
+    }
+
+    t1 = light * 2 - t2;
+    r = self.hueToRgb(t1, t2, hue + 2) * 255;
+    g = self.hueToRgb(t1, t2, hue) * 255;
+    b = self.hueToRgb(t1, t2, hue - 2) * 255;
+
+    return [r, g, b];
+  };
+
+  AutoColor.prototype.hueToRgb = function(t1, t2, hue) {
+    self = this;
+
+    if (hue < 0) {
+      hue += 6;
+    }
+
+    if (hue >= 6) {
+      hue -= 6;
+    }
+    
+    if (hue < 1) {
+      return (t2 - t1) * hue + t1;
+    }
+
+    if (hue < 3) {
+      return t2;
+    }
+
+    if (hue < 4) {
+      return (t2 - t1) * (4 - hue) + t1;
+    }
+     
+    return t1;
   };
 
   // A plugin wrapper around the constructor, 
